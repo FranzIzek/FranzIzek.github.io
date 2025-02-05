@@ -1,0 +1,201 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.content {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.header span {
+    font-size: 16px;
+    color: #007bff;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skillname {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.skillbar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.skillprogress {
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.theme-buttons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #007bff;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.active {
+    transform: scale(1.1);
+    border: 3px solid #000;
+}
+
+button.theme-blue {
+    background-color: #005bb5;
+}
+
+button.theme-beige {
+    background-color: #c2a500;
+}
+
+button.theme-pink {
+    background-color: #ff69b4;
+}
+
+.theme-blue .sidebar,
+.theme-blue .content {
+    background-color: #d3e7f8;
+    color: #333;
+}
+
+.theme-blue .content {
+    background-color: #cfe2ff;
+}
+
+.theme-beige .sidebar,
+.theme-beige .content {
+    background-color: #f5f0e1;
+    color: #333;
+}
+
+.theme-beige .content {
+    background-color: #f3e6c3;
+}
+
+.theme-pink .sidebar,
+.theme-pink .content {
+    background-color: #f8d3e8;
+    color: #333;
+}
+
+.theme-pink .content {
+    background-color: #f9b6d3;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
