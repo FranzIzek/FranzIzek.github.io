@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 150px;
+    padding: 20px;
+    gap: 10px;
+}
+
+button {
+    margin: 5px 0;
+    padding: 10px;
+    border: solid 2px black;
+    font-size: 16px;
+    border-radius: 12px;
+    color: white;
+}
+.mon { background-color: #0B1354; }
+.tues { background-color: #165BAA; }
+.wed { background-color: #92A8D1; }
+.thurs { background-color: #A155B9; }
+.fri { background-color: #F765A3; }
+.sat { background-color: #FFA4B6; }
+.sun { background-color: #F9D1D1; }
+
+
+button:hover {
+    transform: scale(1.09);
+    text-decoration: black;
+}
+
+.box {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.boxcolor {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 5px solid;
+    border-color: ;
+}
+
