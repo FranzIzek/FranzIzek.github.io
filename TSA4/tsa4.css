@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Courgette&family=Poppins&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .background {
     font-family: 'Poppins', sans-serif;
@@ -13,14 +14,20 @@
     top: 20px;
     left: 20px;
     text-align: left;
+    padding-top: 80px;
 }
 
 .headerTitle {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #f8b400;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-family: 'Sacramento', cursive;
+    margin-bottom: 5px;
+}
+
+.headerCont p {
+    font-size: 1.2rem;
 }
 
 .restauContainer {
@@ -59,6 +66,7 @@
     top: 0;
     width: 100%;
     font-family: 'Courgette', cursive;
+    font-weight: bold;
 }
 
 .restauCard img {
@@ -120,13 +128,14 @@
 }
 
 .detsTitle {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    writing-mode: vertical-lr;
     background: #f8b400;
     color: black;
+    transform: rotate(180deg);
     padding: 20px;
     margin-right: 20px;
     font-size: 2rem;
+    text-orientation: sideways;
 }
 
 .pop-image img {
@@ -138,6 +147,7 @@
 .pop-details {
     padding: 20px;
     width: 70%;
+    font-family: 'Playfair Display', serif;
 }
 
 .pop-details h2 {
@@ -170,18 +180,13 @@
         flex-direction: column;
         align-items: center;
     }
-
-    .detsTitle {
-        writing-mode: horizontal-tb;
-        margin-right: 0;
-    }
 }
-
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -191,6 +196,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -202,4 +208,29 @@
 
 .popupDets.fade-out {
     animation: fadeOut 1s forwards;
+}
+
+.close-btn {
+    z-index: 1001;
+    top: 100px !important;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #f8b400;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #dc3545;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.close-btn:active {
+    transform: translateY(1px);
+}
+
+.row.justify-content-center {
+    margin-top: 200px !important;
 }
