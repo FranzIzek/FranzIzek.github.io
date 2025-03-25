@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sacramento&family=Courgette&family=Poppins&family=Nunito&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tsa4.css">
+    <script src="tsa4.js" defer></script>
+</head>
+
+<body class="background">
+    <div class="background-container">
+        <div class="container mt-4">
+            <header class="position-absolute top-0 start-0 ms-3 mt-3 headerCont">
+                <h1 class="headerTitle">Restaurant Guide</h1>
+                <p>Produced by: Local Magazine</p>
+            </header>
+            <div class="row justify-content-center mt-5 pt-5">
+                <div class="col-md-3">
+                    <div class="card bg-secondary text-center restauCard" data-name="Adobo" data-image="adobo.jpg"
+                        data-desc="Adobo is a savory dish where meat, typically pork or chicken, is marinated and simmered in a flavorful mixture of soy sauce, vinegar, garlic, and spices. The result is tender meat with a rich, tangy sauce that pairs perfectly with rice."
+                        data-price="100" data-time="8:00 AM - 10:00 PM"
+                        data-location="FEU Institute of Technology Restaurant">
+                        <img src="adobo.jpg" class="card-img-top" alt="Adobo">
+                        <h3 class="yellow-title">Adobo</h3>
+                        <div class="card-details">
+                            <p class="card-price">₱100</p>
+                            <p class="card-desc">Adobo is a savory dish...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-secondary text-center restauCard" data-name="Sinigang" data-image="sinigang.jpg"
+                        data-desc="Sinigang is a tangy, sour soup often made with pork, shrimp, or fish, cooked with a variety of vegetables in a broth that’s infused with tamarind or other souring agents. The dish balances acidity and savory flavors, making it a comforting, refreshing meal."
+                        data-price="150" data-time="8:00 AM - 10:00 PM"
+                        data-location="FEU Institute of Technology Restaurant">
+                        <img src="sinigang.jpg" class="card-img-top" alt="Sinigang">
+                        <h3 class="yellow-title">Sinigang</h3>
+                        <div class="card-details">
+                            <p class="card-price">₱150</p>
+                            <p class="card-desc">Sinigang is a tangy soup...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-secondary text-center restauCard" data-name="Kare-Kare"
+                        data-image="karekare.jpg"
+                        data-desc="Kare-kare is a rich and hearty stew made with oxtail, tripes, and vegetables, all cooked in a creamy peanut sauce. This dish is typically served with bagoong (fermented shrimp paste) on the side to enhance its savory depth."
+                        data-price="180" data-time="8:00 AM - 10:00 PM"
+                        data-location="FEU Institute of Technology Restaurant">
+                        <img src="karekare.jpg" class="card-img-top" alt="Kare-Kare">
+                        <h3 class="yellow-title">Kare-Kare</h3>
+                        <div class="card-details">
+                            <p class="card-price">₱180</p>
+                            <p class="card-desc">Kare-kare is a rich stew...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-secondary text-center restauCard" data-name="Bulalo" data-image="bulalo.jpg"
+                        data-desc="Bulalo is a warm, comforting soup made from beef shank and bone marrow, slow-cooked to extract deep flavors. The broth is clear and savory, with tender beef and vegetables, offering a perfect balance of richness and simplicity."
+                        data-price="200" data-time="8:00 AM - 10:00 PM"
+                        data-location="FEU Institute of Technology Restaurant">
+                        <img src="bulalo.jpg" class="card-img-top" alt="Bulalo">
+                        <h3 class="yellow-title">Bulalo</h3>
+                        <div class="card-details">
+                            <p class="card-price">₱200</p>
+                            <p class="card-desc">Bulalo is a comforting soup...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-danger position-absolute top-0 end-0 m-3 close-btn">Main Menu</button>
+    </div>
+    <div id="restaurant-details" class="popupDets d-none">
+        <div class="d-flex w-75 bg-white text-dark rounded shadow-lg position-relative popupContainer">
+            <h2 id="popup-title" class="detsTitle"></h2>
+            <div class="pop-image w-50">
+                <img id="popup-image" class="w-100 h-100 object-fit-cover rounded-start">
+            </div>
+            <div class="border-end border-dark"></div>
+            <div class="pop-details w-50 p-3">
+                <h2 id="popup-name" class="pop-title text-danger"></h2>
+                <div class="pop-info">
+                    <div class="left-info">
+                        <p class="fs-6">Location: <span id="popup-location"></span></p>
+                        <p class="fs-6">Opening Hours: <span id="popup-time"></span></p>
+                        <p class="fs-6">Price: ₱<span id="popup-price"></span></p>
+                        <p class="fs-6">Category: <span id="popup-category">Filipino Dish</span></p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right-info">
+                        <p id="popup-desc" class="fs-6"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
