@@ -27,11 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     closeBtn.addEventListener("click", function () {
-        popupDets.classList.remove("fade-in");
-        popupDets.classList.add("fade-out");
+        if (!popupDets.classList.contains("d-none")) {
+            popupDets.classList.remove("fade-in");
+            popupDets.classList.add("fade-out");
 
-        setTimeout(function () {
-            popupDets.classList.add("d-none");
-        }, 500);
+            setTimeout(function () {
+                popupDets.classList.add("d-none");
+            }, 500);
+        }
     });
 });
